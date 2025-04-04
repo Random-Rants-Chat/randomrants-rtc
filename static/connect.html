@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screenshare Client - Random Rants</title>
+  </head>
+  <body>
+    <style>
+      .loader {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 6px;
+        border-color: #878787;
+        position: relative;
+        animation: prixClipFix 1.34s steps(100)
+          infinite;
+      }
+
+      @keyframes prixClipFix {
+        0% {
+          clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+          transform: rotate(0deg);
+        }
+        50% {
+          clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+          transform: rotate(180deg);
+        }
+        100% {
+          clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <div
+      style="
+        background: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+      "
+    >
+      <div class="loader" id="spinner" hidden style="position:fixed;top:calc(50% - 50px);left:calc(50% - 50px);width:100px;height:100px;">
+        
+      </div>
+      <video id="video" style="width: 100%; height: 100%"></video>
+      <p hidden id="clicktostart" style="width:100%;height:100%;position:fixed;top:0;left:0;cursor:pointer;line-height:100vh;font-family:arial;font-size:30px;color:white;text-align:center;">
+        Click/tap to start playback
+      </p>
+    </div>
+    
+    <script src="wrtc.js"></script>
+    <script src="client.js"></script>
+    <script src="screenshare.js"></script>
+    <script src="demo-connect.js"></script>
+  </body>
+</html>
