@@ -1,0 +1,20 @@
+{
+  "name": "randomrants-rtc",
+  "version": "1.0.0",
+  "description": "Random Rants server for WebRTC streaming.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "*",
+    "http": "*"
+  },
+  "license": "MIT",
+  "keywords": [
+    "glitch",
+    "node",
+    "webrtc",
+    "wrtc"
+  ]
+}
