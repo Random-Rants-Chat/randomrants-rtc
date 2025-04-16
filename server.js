@@ -124,7 +124,7 @@ function fakeIoCreate() { //io module was having problems, so remade a smaller a
           io.endFunction();
         }
       }
-      if (hostId) {
+      if (io.to(hostId)) {
         io.to(hostId).emit("socketDisconnection",socket.id);
       }
       var i = 0;
