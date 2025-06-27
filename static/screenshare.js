@@ -385,7 +385,7 @@
     return new ScreenSharePeer(id, autoconnect, onstream, ondisconnect);
   }
 
-  setInterval(() => fetch(urlhostname + "wake"), 3000);
+  setInterval(() => fetch(urlhostname + "wake"), 15000); //Changes so render.com won't suspend me (hopefully this does not happen)
 
   window.screenShareClient = {
     newHost: startHost,
