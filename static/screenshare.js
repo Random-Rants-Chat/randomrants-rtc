@@ -7,8 +7,8 @@
   var iocli = window.fakeIOClient;
   var wrtc = window.wrtc;
   var Peer = window.Peer;
-  var urlhostname = "https://randomrants-rtc.glitch.me/";
-  var wshostname = "wss://randomrants-rtc.glitch.me/";
+  var urlhostname = "https://randomrants-rtc.onrender.com/";
+  var wshostname = "wss://randomrants-rtc.onrender.com/";
 
   var configstuff = {
     iceServers: [
